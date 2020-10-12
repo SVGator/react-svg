@@ -1,3 +1,11 @@
+div{
+  width: 100vw;
+  height: 100vh;
+  background-color: #020917;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 button{
   height: 400px;
   width: 600px;
@@ -6,7 +14,7 @@ button{
   z-index: 3;
 }
 object {
-  border: 3 px solid black;
+  border: 3px solid black;
   z-index: -1;
   position: relative;
 }
