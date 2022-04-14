@@ -1,28 +1,31 @@
-import React, { useState } from "react";
-import Animated from "./Animated.svg";
-import "./App.css";
-
+import logo from './logo.svg';
+import './App.css';
+import Stopwatch from './Stopwatch';
 function App() {
-  let [color, setColor] = useState(false);
-
-  function handleClick() {
-    let svg = window.document.getElementById("mysvg");
-    let svgDocument = svg.contentDocument;
-    let svgTag = svgDocument.getElementById("efxc4pz558wj1"); // the id from the svg file
-    svgTag.dispatchEvent(new Event("click"));
-
-    console.log("It's working");
-    setColor(!color);
-  }
   return (
-    <div>
-    <button className={color ? "null" : "button"} onClick={handleClick}>
-      <h1>Button with animated svg inside</h1>
-      <object id="mysvg" type="image/svg+xml" data={Animated}>
-        svg-animation
-      </object>
-    </button>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        <div className="stopwatch">
+        <Stopwatch />
+        </div>
+      </header>
+      <div>
+
+      </div>
     </div>
   );
 }
+
 export default App;
